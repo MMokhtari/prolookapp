@@ -1,0 +1,94 @@
+{% extends "./home/home.html" %} {% block title %}{{ title }}{% endblock %} {% load staticfiles %} {% block homeassets %}
+<link rel="stylesheet" href="{% static '/static/workplace/css/workplace.css' %}" /> {% endblock %} {% block content %}
+<div>
+    <nav ng-controller="WorkplaceHeaderController" class="navbar navbar-default navbar-fixed-top " >
+        <div class="container-fluid">
+            <ul class="nav-inner" style="padding-top:10px;padding-right:15px;">
+                <!-- <div class="pull-left" DirURL="{$ COMPANY_NAME_URL $}" DirVar="{$ COMPANY_NAME $}" editinplace></div> -->
+                <img class="" width="99px" height="33px" src="{% static '/static/csa/assets/img/prolook.PNG' %}">
+                <i class="fa fa-home fa-2x hvr-icon-pulse" style='position: relative;bottom: 10px' ng-click="home_click()"></i>
+                <div class="btn-group pull-right">
+                    <div class="hvr-pop" style="margin-right:10px">
+                        <i class="glyphicon glyphicon-tasks fa-2x"><span class="badge pull-left" style='position: relative;bottom: 5px;left: 8px; background-color:rgb(63, 172, 186)'>5</span></i>
+                    </div>
+                    <div class="hvr-buzz-out" style="margin-right:10px">
+                        <i class="fa fa-bell-o fa-2x"><span class="badge pull-left" style='position: relative;bottom: 5px;left: 8px; background-color:rgb(63, 172, 5)'>2</span></i>
+                    </div>
+                    <!-- <button type="button" class="btn btn-default btn-lg dropdown-toggle" data-toggle="dropdown"> -->
+                    <!--{% load staticfiles %}
+                    <img class="img-circle" width="20px" height="20px" src="{% static '/static/workplace/img/avatar.jpg' %}">-->
+                    <i style="margin-right:10px" class="dropdown-toggle hvr-pop" data-toggle="dropdown"><img class="img-circle" width="32px" height="32px" src="{% static '/static/workplace/img/me&hich.jpg' %}"></i>
+                    <ul class="dropdown-menu pull-right">
+                        <li><a href="#">Edit profile</a></li>
+                        <li class="divider"></li>
+                        <li><a href="/logout/">Log out</a></li>
+                    </ul>
+                </div>
+            </ul>
+        </div>
+    </nav>
+    {% block workplacecontent %}
+    <div ng-controller="WorkplaceController" class="container-fluid">
+        <div class="row">
+            <div id="companymanager" class="col-sm-6 col-md-4 text-center hvr-float-shadow">
+                <div class="thumbnail">
+                    <img class="img-circle" width="100px" height="100px" src="{% static '/static/workplace/img/corp.png' %}">
+                    <div class="caption">
+                        <h3 class="text-center">Company Manager</h3>
+                        <p class="text-center">Set your company logo,name,addresses and milestones</p>
+                        <p class="btn btn-primary text-center" ng-click="companymanagerclick()">Start</p>
+                    </div>
+                </div>
+            </div>
+            <div id="handovermanager" class="col-sm-6 col-md-4 text-center hvr-float-shadow">
+                <div class="thumbnail">
+                    <img class="img-circle" width="100px" height="100px" src="{% static '/static/workplace/img/handover.png' %}">
+                    <div class="caption">
+                        <h3 class="text-center">HandOver Manager</h3>
+                        <p class="text-center">Make sure that the new employee handle there job
+                        </p>
+                        <p ng-click="handovermanagerclick()" class="btn btn-primary text-center">Start</p>
+                    </div>
+                </div>
+            </div>
+            <div id="taskmanager" class="col-sm-6 col-md-4 text-center hvr-float-shadow">
+                <div class="thumbnail">
+                    <img class="img-circle" width="100px" height="100px" src="{% static '/static/workplace/img/task.png' %}">
+                    <div class="caption">
+                        <h3 class="text-center">Task Manager</h3>
+                        <p class="text-center">Start ,update and validate tasks and events </p>
+                        <p ng-click="taskmanagerclick()" class="btn btn-primary text-center">Start</p>
+                    </div>
+                </div>
+            </div>
+            <div id="employeesmanager" class="col-sm-6 col-md-4 text-center hvr-float-shadow">
+                <div class="thumbnail">
+                    <img class="" width="100px" height="100px" src="{% static '/static/workplace/img/employees.png' %}">
+                    <div class="caption">
+                        <h3 class="text-center">Employees Manager</h3>
+                        <p class="text-center">Add ,delete ,update and organize your employees</p>
+                        <p ng-click="employeesmanagerclick()" class="btn btn-primary text-center">Start</p>
+                    </div>
+                </div>
+            </div>
+            <div id="kmmanager" class="col-sm-6 col-md-4 text-center hvr-float-shadow">
+                <div class="thumbnail">
+                    <img class="img-circle" width="100px" height="100px" src="{% static '/static/workplace/img/km2.png' %}">
+                    <div class="caption">
+                        <h3 class="text-center">Knowledge Managment Manager</h3>
+                        <p class="text-center">Capture ,organize and save your employees knowlegde </p>
+                        <p ng-click="kmmanagerclick()" class="btn btn-primary text-center">Start</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4"> <img src=""> </div>
+            <div class="col-md-4"> </div>
+            <div class="col-md-4"> </div>
+        </div>
+    </div>
+    {% endblock %}
+</div>
+<!-- Fixed navbar -->
+{% endblock %}

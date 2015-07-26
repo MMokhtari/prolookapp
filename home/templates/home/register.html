@@ -1,0 +1,246 @@
+{% extends "./home/home.html" %}
+{% block title %}{{ content.title }}{% endblock %}
+{% load staticfiles %}
+{% block homeassets %}
+<link rel="stylesheet" href="{% static '/static/home/css/registerStyle.css' %}" />
+<!-- <link rel="stylesheet" type="text/css" href="{% static '/static/csa/assets/css/register_style.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static '/static/csa/assets/css/register_animate-custom.css' %}" />  -->
+{% endblock%}
+</head>
+
+{% block content %}
+<div class="bodybgc">
+    <div ng-controller="RegisterController" class="container " style="margin-top:20px">
+
+        <div class="price-container" style="padding-left:5% ;padding-right:5%">
+
+
+            <div class="row">
+                <h2>
+                Sign up and start using ProLookApp in minutes
+                </h2>
+                <p class="gray-text">
+                </p>
+            </div>
+            <div class="row" style="padding-bottom:20px; ">
+                <!-- SignUp form -->
+                <div id="register" class="col-md-6 col-md-offset-2 col-sm-8 col-sm-offset-3" style="margin-left:21%">
+                    <div class="signup-container">
+                        <div class="">
+                            <div class="text-center">
+                                <h3>Sign Up</h3>
+                            </div>
+
+                        </div>
+
+                        <div style="padding-top:30px" class="panel-body">
+
+                            <div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
+
+                            <form id="loginform" name="form2" class="form-horizontal" role="form">
+
+                                <div style="margin-bottom: 25px">
+                                    <input type="text" class="signup-text-field form-control" ng-model="newuser.username" name="username" value="" placeholder="username">
+                                </div>
+                                <div style="margin-bottom: 25px">
+                                    <input type="text" class="signup-text-field form-control" ng-model="newuser.email" name="email" value="" placeholder="email">
+                                </div>
+                                <div style="margin-bottom: 25px">
+                                    <input type="password" class="signup-text-field  form-control" ng-model="newuser.password" name="password" placeholder="password">
+                                </div>
+                                <div style="margin-bottom: 25px">
+                                    <input type="password" class="signup-text-field  form-control" ng-model="newuser.password_confirm" name="password" placeholder="confirm password">
+                                </div>
+
+                                <div style="margin-top:10px" class="form-group">
+                                    <!-- Button -->
+
+                                    <div class="col-sm-12 controls">
+                                        <span ng-click="register()" class="signup-button">Sign Up</span><span> Or </span>
+                                        <button class="btn btn-google-plus"><i class="fa fa-google"></i> | Sign Up with Google </button>
+
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group">
+                                    <div class="col-md-12 control">
+                                        <div class="bar"></div>
+                                        Have an account
+                                        <a href="#" ng-click="tosignin()">
+                                            Sign In
+                                        </a>
+
+                                    </div>
+                                </div>
+                            </form>
+
+
+
+                        </div>
+                    </div>
+                </div>
+                <!-- End -->
+            </div>
+            <div class="row">
+                <div id="enterprise" class=" col-sm-6 col-md-3  price-tag  ">
+
+                    <dl style="margin-bottom:150px">
+                        <dd>
+                            <h3>
+                            Enterprise
+                            </h3>
+                            <span>$50/month</span>
+                        </dd>
+                        <dt class="price-tag-trail-box">
+                            <span>30 day free trial !</span>
+
+                        </dt>
+                        <dt class="price-tag-row">
+                            <strong class="price-tag-green">Unlimited</strong> storage
+                        </dt>
+                        <dt class="price-tag-row">
+                            <strong class="price-tag-green">Unlimited</strong> employees
+                        </dt>
+
+
+                    </dl>
+
+                    <span ng-click="enterpriseclick()" class="signup-button">Sign Up</span>
+
+
+                </div>
+
+
+                <div id="professional" class=" col-sm-6 col-md-3  price-tag ">
+
+                    <dl style="margin-bottom:150px">
+                        <dd>
+                            <h3>
+                            Professional
+                            </h3>
+                            <span>$30/month</span>
+                        </dd>
+                        <dt class="price-tag-trail-box">
+                            <span>30 day free trial !</span>
+                        </dt>
+                        <dt class="price-tag-row">
+                            <strong class="price-tag-green">Unlimited</strong> storage
+                        </dt>
+                        <dt class="price-tag-row">
+                            <strong class="price-tag-green">50</strong> employees
+                        </dt>
+
+
+                    </dl>
+
+                    <span ng-click="professionalclick()" class="signup-button">Sign Up</span>
+
+
+                </div>
+
+                <div id="free" class=" col-sm-6 col-md-3  price-tag ">
+
+                    <dl style="margin-bottom:150px">
+                        <dd>
+                            <h3>
+                            Free
+                            </h3>
+                            <span>$0/month</span>
+                        </dd>
+                        <dt class="price-tag-trail-box">
+                            <span>30 day free trial !</span>
+
+                        </dt>
+                        <dt class="price-tag-row">
+                            <strong class="price-tag-red">10 Mb</strong> storage
+                        </dt>
+                        <dt class="price-tag-row">
+                            <strong class="price-tag-red">10</strong> employees
+                        </dt>
+
+
+                    </dl>
+
+                    <span ng-click="freeclick()" class="signup-button">Sign Up</span>
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- <section>
+            <div id="container">
+
+                <div   id="wrapper">
+                    <div ng-controller="SigninController" id="login"  class="animate form">
+                        <form  role="form"  name="form1" autocomplete="on">
+                            <h1>Log in</h1>
+                            <p>
+                            <label for="username" class="uname" data-icon="u" > Your email or username </label>
+                            <input ng-model="user.username" id="username_id" name="username" required="required" type="text" placeholder="myusername or mymail@mail.com"/>
+                            </p>
+                            <p>
+                            <label for="password" class="youpasswd" data-icon="p"> Your password </label>
+                            <input ng-model="user.password" name="password" id="password_id" required="required" type="password" placeholder="eg. X8df!90EO" />
+                            </p>
+                            <p class="keeplogin">
+                            <input type="checkbox" name="loginkeeping" ng-model="user.loginkeeping" value="loginkeeping" />
+                            <label for="loginkeeping">Keep me logged in</label>
+                            </p>
+                            <p class="login button">
+                            <input type="submit"  ng-click="signin()" ng-disabled='form1.$invalid' value="Login" />
+                            </p>
+                            <p class="change_link">
+                            Not a member yet ?
+                            <a ng-click="toregister()" >Join us</a>
+                            </p>
+                        </form>
+                    </div>
+                    <div ng-controller="RegisterController" id="register"  class="animate form">
+                        <form  role="form"  name="form2" autocomplete="on">
+                            <h1> Sign up </h1>
+                            <p>
+                            <label for="usernamesignup" class="uname" data-icon="u">Your username</label>
+                            <input ng-model="newuser.username"  id="reg_username_id" required="required" type="text" placeholder="mysuperusername690" />
+                            </p>
+                            <p>
+                            <label for="emailsignup" class="youmail" data-icon="e" > Your email</label>
+                            <input ng-model="newuser.email" id="reg_email_id" required="required" type="email" placeholder="mysupermail@mail.com"/>
+                            </p>
+                            <p>
+                            <label for="passwordsignup" class="youpasswd" data-icon="p">Your password </label>
+                            <input ng-model="newuser.password"  id="reg_password_id" required="required" type="password" placeholder="eg. X8df!90EO"/>
+                            </p>
+                            <p>
+                            <label for="password_confirm" class="youpasswd" data-icon="p">Please confirm your password </label>
+                            <input ng-model="newuser.password_confirm" id="reg_password2_id" required="required" type="password" placeholder="eg. X8df!90EO"/>
+                            </p>
+                            <p class="signin button">
+                            <input type="submit" ng-click="register()" ng-disabled='form2.$invalid' value="Sign up"/>
+                            </p>
+                            <p class="change_link">
+                            Already a member ?
+                            <a  ng-click="tosignin()" > Go and log in </a>
+                            </p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+    {% block init%}
+    <div id="loader">
+        <img src="{% static '/static/csa/assets/img/ajax-loader.gif' %}" class="ajax-loader" />
+    </div>
+
+    <script type="text/javascript">
+    $('#loader').hide();
+    /* $("#register").toggleClass('inin', 'True');
+     $("#login").toggleClass('outout', 'True');*/
+    </script>
+    {% endblock %} 
+</div>
+{% endblock %}

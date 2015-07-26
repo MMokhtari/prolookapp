@@ -1,0 +1,41 @@
+body {
+    padding-top: 70px;
+}
+.menubox {
+    box-shadow: rgba(0, 0, 0, 0) 0px 0px 1px 0px;
+    color: rgb(102, 102, 102);
+    cursor: pointer;
+    display: inline-block;
+    height: 45px;
+    text-decoration: none;
+    width: 200px;
+    background: rgb(225, 225, 225) none repeat scroll 0% 0% / auto padding-box border-box;
+    border: 0px none rgb(102, 102, 102);
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 14px;
+    text-align: center;
+    font: normal normal normal normal 16px/21px 'Helvetica Neue', Arial, sans-serif;
+    margin-bottom: 5px;
+    vertical-align: middle;
+}
+
+
+.animate-enter {
+	-webkit-transition: 1s linear all; /* Chrome */
+	transition: 1s linear all;
+	opacity: 0;
+}
+ 
+.animate-enter.animate-enter-active {
+	opacity: 1;
+}
+.animate{
+	-webkit-transition: 1s linear all; /* Chrome */
+	transition: 1s linear all;
+	opacity: 0;
+}
+.menuboxclick{
+	background-color: #2098D1;
+}

@@ -1,0 +1,70 @@
+body {
+    padding-top: 70px;
+}
+.btn-circle {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    padding: 6px 0;
+    font-size: 12px;
+    line-height: 1.428571429;
+    border-radius: 15px;
+}
+.btn-circle.btn-lg {
+    width: 50px;
+    height: 50px;
+    padding: 10px 16px;
+    font-size: 18px;
+    line-height: 1.33;
+    border-radius: 25px;
+}
+.icnn{
+left: 0;
+top: -2px;
+background: no-repeat url(//s.ytimg.com/yts/imgbin/www-hitchhiker-vflA7KI54.webp) -339px -169px;
+background-size: auto;
+width: 30px;
+height: 30px;
+opacity: .55;
+}
+
+.btn-circle.btn-xl {
+    width: 70px;
+    height: 70px;
+    padding: 10px 16px;
+    font-size: 24px;
+    line-height: 1.33;
+    border-radius: 35px;
+}
+@-webkit-keyframes me-pop {
+    50% {
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
+   }
+}
+@keyframes me-pop {
+    50% {
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
+   }
+}
+.me-pop {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+}
+.me-pop:hover, .me-pop:focus, .me-pop:active {
+    -webkit-animation-name: hvr-pop;
+    animation-name: hvr-pop;
+    -webkit-animation-duration: 0.3s;
+    animation-duration: 0.3s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+}

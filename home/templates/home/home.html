@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html ng-app="csa">
+
+<head>
+    <title>{% block title %}{{ content.title }}{% endblock %}</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <link rel="shortcut icon" href="{{STATIC_URL}}csa/assets/img/favicon.ico" type="image/x-icon"> {% load staticfiles %}
+    <!-- Main Js libs & scripts-->
+    <script type="text/javascript" src="{% static '/static/csa/assets/libs/jquery-2.1.1/jquery.min.js' %}"></script>
+    <script type="text/javascript" src="{% static '/static/csa/assets/libs/angular-1.3.8/angular.min.js' %}"></script>
+    <script type="text/javascript" src="{% static '/static/csa/assets/libs/angular-1.3.8/angular-resource.min.js' %}"></script>
+    <script type="text/javascript" src="{% static '/static/csa/assets/libs/angular-1.3.8/angular-route.min.js' %}"></script>
+    <!--CDN link for the latest TweenMax-->
+    <!-- <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script> -->
+    <script type="text/javascript" src="{% static '/static/csa/assets/libs/gsap-1.16.0/TweenMax.min.js' %}"></script>
+    <script type="text/javascript" src="{% static '/static/csa/assets/libs/gsap-1.16.0/plugins/ScrollToPlugin.min.js' %}"></script>
+
+    <script type="text/javascript" src="{% static '/static/csa/assets/libs/ScrollMagic-2.0.0/ScrollMagic.min.js' %}"></script>
+    <!--  <script type="text/javascript" src="{% static '/static/csa/assets/libs/ScrollMagic-2.0.0/plugins/animation.gsap.min.js' %}"></script>
+    <script type="text/javascript" src="{% static '/static/csa/assets/libs/ScrollMagic-2.0.0/plugins/debug.addIndicators.min.js' %}"></script> -->
+
+
+    <script type="text/javascript" src="{% static '/static/csa/assets/js/generalScripts.js' %}"></script>
+    <!-- End -->
+    <!-- General Style sheets -->
+    <link rel="stylesheet" href="{% static '/static/csa/assets/css/generalStyles.css' %}" />
+    <!-- End -->
+    <!-- ng-tags-input -->
+
+    <script type="text/javascript" src="{% static '/static/csa/assets/libs/ng-tags-input-2.2.0/js/ng-tags-input.js' %}"></script>
+     <link rel="stylesheet" href="{% static '/static/csa/assets/libs/ng-tags-input-2.2.0/css/ng-tags-input.css' %}" />
+    <!-- End -->
+    <!-- xeditable   -->
+    <script type="text/javascript" src="{% static '/static/csa/assets/libs/xeditable-0.1.8/js/xeditable.min.js' %}"></script>
+     <link rel="stylesheet" href="{% static '/static/csa/assets/libs/xeditable-0.1.8/css/xeditable.css' %}" />
+    <!--End-->
+    <!-- font awesome   -->
+    <link rel="stylesheet" href="{% static '/static/csa/assets/libs/font-awesome-4.3.0/css/font-awesome.min.css' %}" />
+    <!-- End -->
+    <!-- Hover master   -->
+    <link rel="stylesheet" href="{% static '/static/csa/assets/libs/hover-master-2.0.2/hover-min.css' %}" />
+    <!-- End -->
+     <!-- fonts   -->
+    <link rel="stylesheet" href="{% static '/static/csa/assets/css/fonts/oswald.css' %}" />
+    <link rel="stylesheet" href="{% static '/static/csa/assets/css/fonts/myriadpro.css' %}" />
+    <!-- End -->
+    <!-- social bootstrap buttons -->
+    <link rel="stylesheet" href="{% static '/static/csa/assets/css/social-buttons-3.css' %}" />
+    <!-- End -->
+    <!-- twitter bootstrap  -->
+    <link rel="stylesheet" href="{% static '/static/csa/assets/libs/bootstrap-3.3.2/css/bootstrap.min.css' %}" />
+    <script type="text/javascript" src="{% static '/static/csa/assets/libs/bootstrap-3.3.2/js/bootstrap.min.js' %}"></script>
+    <!-- End -->
+    <!-- Welcome page Js and Css -->
+    {% block homeassets %}
+    <!-- <script src="{% static '/static/home/js/jquery.scrolly.min.js' %}"></script> -->
+    <!-- <script src="{% static '/static/home/js/skel.min.js' %}"></script> -->
+    <script src="{% static '/static/csa/assets/libs/carousel-3d/3d-transformation-utils.js' %}"></script>
+    <script src="{% static '/static/csa/assets/libs/carousel-3d/carousel-3d.js' %}"></script>
+    <link rel="stylesheet" href="{% static '/static/csa/assets/libs/carousel-3d/theme/default/carousel-3d.css' %}" />
+
+    <!-- <noscript> -->
+    <link rel="stylesheet" href="{% static '/static/csa/assets/libs/normalize.css' %}" />
+    <link rel="stylesheet" href="{% static '/static/home/css/style.css' %}" />
+    <!-- <link rel="stylesheet" href="{% static '/static/home/css/skel.css' %}" />
+    <link rel="stylesheet" href="{% static '/static/home/css/style-desktop.css' %}" /> -->
+    {% endblock %}
+    <!-- </noscript> -->
+    <!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+    <!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
+    <!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+    <!-- End -->
+
+    <!-- Animate   -->
+    <link rel="stylesheet" href="{% static '/static/csa/assets/libs/animate.css' %}" />
+
+    <!-- End -->
+    <!-- Controllers and services -->
+    <script type="text/javascript" src="{% static '/static/csa/app/csa.js' %}"></script>
+    <script type="text/javascript" src="{% static '/static/csa/app/shared/csaDirectives.js' %}"></script>
+    <script type="text/javascript" src="{% static '/static/csa/app/components/handonoff/HandonoffControllers.js' %}"></script>
+    <script type="text/javascript" src="{% static '/static/csa/app/components/handonoff/HandonoffServices.js' %}"></script>
+    <script type="text/javascript" src="{% static '/static/csa/app/components/home/HomeControllers.js' %}"></script>
+    <script type="text/javascript" src="{% static '/static/csa/app/components/home/HomeServices.js' %}"></script>
+    <script type="text/javascript" src="{% static '/static/csa/app/components/home/HomeDirective.js' %}"></script>
+    <script type="text/javascript" src="{% static '/static/csa/app/components/workplace/WorkplaceControllers.js' %}"></script>
+    <script type="text/javascript" src="{% static '/static/csa/app/components/workplace/WorkplaceServices.js' %}"></script>
+    <script type="text/javascript" src="{% static '/static/csa/app/components/workplace/WorkplaceDirectives.js' %}"></script>
+    <script type="text/javascript" src="{% static '/static/csa/app/components/companymanager/CompanyManagerControllers.js' %}"></script>
+    <script type="text/javascript" src="{% static '/static/csa/app/components/companymanager/CompanyManagerServices.js' %}"></script>
+    <script type="text/javascript" src="{% static '/static/csa/app/components/employeesmanager/EmployeesManagerControllers.js' %}"></script>
+    <script type="text/javascript" src="{% static '/static/csa/app/components/employeesmanager/EmployeesManagerServices.js' %}"></script>
+     <script type="text/javascript" src="{% static '/static/csa/app/components/taskmanager/TaskManagerControllers.js' %}"></script>
+    <script type="text/javascript" src="{% static '/static/csa/app/components/taskmanager/TaskManagerServices.js' %}"></script>
+    <!-- End -->
+
+</head>
+
+<body>
+    {% block content %}
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+
+            <a class="navbar-brand" href="#">
+                <img alt="Brand" src="/static/csa/app/components/home/partials/img/backg.png" width="32px" height="32px">
+            </a>
+            <div style="margin-left:30% ;float:left">
+                <div href="#home" type="button" class="btn btn-default navbar-btn ">What is not ProLookApp</div>
+                <div href="#features" type="button" class="btn btn-default navbar-btn ">What we do</div>
+                <div href="#signup" type="button" class="btn btn-default navbar-btn ">SignUp</div>
+            </div>
+            <a href="/login/" class="btn btn-primary btn-sm" style='float:right;font-size:14px !important;margin-top:10px' align="right" />Log in</a>
+        </div>
+    </nav>
+    <div class="nav-bar">
+        <div class="nav-bar-comp">
+            <a href="#home">Home
+            <div class="nav-bar-comp-left">
+                <div class="nav-bar-comp-leftC">
+                </div>
+            </div>
+            <div class="nav-bar-comp-right">
+                <div class="nav-bar-comp-rightC">
+                </div>
+            </div>
+            </a>
+        </div>
+        <div class="nav-bar-comp">
+            <a href="#features">What we do
+            <div class="nav-bar-comp-left">
+                <div class="">
+                </div>
+            </div>
+            <div class="nav-bar-comp-right">
+                <div class="">
+                </div>
+            </div>
+            </a>
+        </div>
+        <div class="nav-bar-comp">
+            <a href="#signup">signup
+            <div class="nav-bar-comp-left">
+                <div class="">
+                </div>
+            </div>
+            <div class="nav-bar-comp-right">
+                <div class="">
+                </div>
+            </div>
+            </a>
+        </div>
+    </div>
+    <div id="content-wrapper">
+        <section id="pin" class="scroll-magic-section ">
+            <div id="wipe" style="height:100%;" class="wrapper style2 ">
+                <div id="home" class="MScontainer">
+                    <!-- Home -->
+                    <div ng-controller="HomeController">
+                        <div class="header">
+                            <h3 align="left">Hello {{user}}</h3>
+                        </div>
+                        <article class="container" id="top">
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <span class="image fit"><img id ="flipflip" src="/static/csa/app/components/home/partials/img/backg.png" alt="" /></span>
+                                </div>
+                                <div class="col-md-6">
+                                    <header>
+
+                                       
+                                        <h2><strong>ProLookApp</strong></h2>
+                                    </header>
+                                    <p>
+                                        <br/>
+                                        Simply what prolookapp does is that it helps to seperate the social and the working sides in you business 
+
+                                    </p>
+                                    <a href="#features" class="btn  btn-primary ">Find out more</a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+
+            <div id="second-wipe" class="wrapper style5 text-center" style="min-height:100%">
+                <div id="features" class="MScontainer">
+
+                    <article id="work" class="container">
+                        <div class="row">
+
+                            <header class="text-center">
+                                <h1 style="font-size:4em !important">We do care about the seperation of social and working sides inside the work</h1>
+                                <h2 style="margin-bottom:20px;">Above all you can't say untill you try</h2>
+                            </header>
+                        </div>
+                        <div>
+                            <!-- <div class="row text-center">
+                                <div style="width:100%;height:100%">
+                                    <ul data-carousel-3d class="theme-default something">
+                                        <li>
+                                            <div>
+                                                <p style="background-color:black; color:white; margin:20px; padding:20px;">A simple html child</p>
+                                                <div style="background-color:gray; color:white;">Html contents also works ok!!!</div>
+                                                <div>The quick brown fox jumps over the lazy dog</div>
+                                                <p>
+                                                    Make the fox
+                                                    <button type="button" onclick="alert('Jump!!');">jump</button>
+                                                </p>
+                                            </div>
+                                        </li>
+                                        <li><img src="/static/csa/app/components/home/partials/img/castles-616573_640.jpg" />
+                                        </li>
+                                        <li selected><img src="/static/csa/app/components/home/partials/img/cup-617422_640.jpg" />
+                                        </li>
+                                        <li><img src="/static/csa/app/components/home/partials/img/fresh-peppers-619132_640.jpg" />
+                                        </li>
+                                        <li><img src="/static/csa/app/components/home/partials/img/keyboard-621830_640.jpg" />
+                                        </li>
+                                        <li><img src="/static/csa/app/components/home/partials/img/landscape-540122_640.jpg" />
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="row">
+
+
+                            </div> -->
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                                        <div class="flipper">
+                                            <div class="front">
+                                                <!-- front content -->
+                                                <i class="fa fa-users fa-5x"></i>
+                                                <h3 style="margin-top:60px;">Quick & Easy handover</h3>
+                                            </div>
+                                            <div class="back">
+                                                <!-- back content -->
+                                                <h3>Quick & Easy handover</h3>
+                                                <p style="font-size:16px !important">
+                                                Allows you to transfer the work duties & assignments in a very efficient way for new comers employees incase of unexpected resignations . 
+                                                </p>
+                                                <div class="bottom_aligner"></div><p class="btn btn-primary btn-sm" style="background:green;" />Find Out More</p>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                 <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                                        <div class="flipper">
+                                            <div class="front">
+                                                <!-- front content -->
+                                                <i class="fa fa-line-chart fa-5x"></i>
+                                                <h3 style="margin-top:60px;">Continious Improvement & Innovation</h3>
+                                            </div>
+                                            <div class="back">
+                                                <!-- back content -->
+                                                <h3>Continious Improvement & Innovation</h3>
+                                                <p style="font-size:16px !important">
+                                                Developping your working methods on daily basis by recording all the actions related to the employee job which will give him a safe work ownership and merit .
+                                                </p>
+                                                <p class="btn btn-primary btn-sm" style="margin-top:30px;background:green;" />Find Out More</p>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                     <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                                        <div class="flipper">
+                                            <div class="front">
+                                                <!-- front content -->
+                                                <i class="fa fa-tasks fa-5x"></i>
+                                                <h3 style="margin-top:60px;">Job description and tasks assignment</h3>
+                                            </div>
+                                            <div class="back">
+                                                <!-- back content -->
+                                                <h3>Job description and tasks assignment</h3>
+                                                <p style="font-size:16px !important">
+                                                A prompt clear deffinition of the tasks for all employees so as to avoid botlenecks and unnecessary conflicts . 
+                                                </p>
+                                                <p class="btn btn-primary btn-sm" style="margin-top:30px;background:green;" />Find Out More</p>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <div class="col-md-4">
+                                     <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                                        <div class="flipper">
+                                            <div class="front">
+                                                <!-- front content -->
+                                                <i class="fa fa-bomb fa-5x"></i>
+                                                <h3 style="margin-top:60px;">Swift adaptation to market changes</h3>
+                                            </div>
+                                            <div class="back">
+                                                <!-- back content -->
+                                                <h3>Swift adaptation to market changes</h3>
+                                                <p style="font-size:16px !important">
+                                               Embrace environnemental changes easily in order to make the Employees feeling self-confidant without affecting thier respective tasks .
+                                                </p>
+                                                <p class="btn btn-primary btn-sm" style="margin-top:30px;background:green;" />Find Out More</p>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                   
+                                </div>
+                               
+                                <div class="col-md-4">
+                                     <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                                        <div class="flipper">
+                                            <div class="front">
+                                                <!-- front content -->
+                                                <i class="fa fa-bomb fa-5x"></i>
+                                                <h3 style="margin-top:60px;">Inrcease objectiveness within the organization</h3>
+                                            </div>
+                                            <div class="back">
+                                                <!-- back content -->
+                                                <h3>Inrcease objectiveness within the organization</h3>
+                                                <p style="font-size:16px !important">
+                                                Get rid of all subjective judgments and prejudices about employees in order to know the real value of your staff . 
+                                                </p>
+                                                <p class="btn btn-primary btn-sm" style="margin-top:30px;background:green;" />Find Out More</p>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                   
+                                </div>
+                                <div class="col-md-4">
+                                     <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                                        <div class="flipper">
+                                            <div class="front">
+                                                <!-- front content -->
+                                                <i class="fa fa-bomb fa-5x"></i>
+                                                <h3 style="margin-top:60px;">Auto assesment</h3>
+                                            </div>
+                                            <div class="back">
+                                                <!-- back content -->
+                                                <h3>Auto assesment</h3>
+                                                <p style="font-size:16px !important">
+                                              Gives a true and fair view of employee progress and results by highliting the strenghts and weaknesses to be enhanced . 
+                                                </p>
+                                                <p class="btn btn-primary btn-sm" style="margin-top:30px;background:green;" />Find Out More</p>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                 
+                                </div>
+                                <div class="col-md-4">
+                                     <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                                        <div class="flipper">
+                                            <div class="front">
+                                                <!-- front content -->
+                                                <i class="fa fa-bomb fa-5x"></i>
+                                                <h3 style="margin-top:60px;">Learning & training  sugestions</h3>
+                                            </div>
+                                            <div class="back">
+                                                <!-- back content -->
+                                                <h3>Learning & training  sugestions</h3>
+                                                <p style="font-size:16px !important">
+                                               By informing the employee about all the available training sessions related to his job in a real time with registration enrollement possibility .
+                                                </p>
+                                                <p class="btn btn-primary btn-sm" style="margin-top:30px;background:green;" />Find Out More</p>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                   
+                                </div>
+                                <div class="col-md-4">
+                                     <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                                        <div class="flipper">
+                                            <div class="front">
+                                                <!-- front content -->
+                                                <i class="fa fa-bomb fa-5x"></i>
+                                                <h3 style="margin-top:60px;">Meeting & events Management </h3>
+                                            </div>
+                                            <div class="back">
+                                                <!-- back content -->
+                                                <h3>Meeting & events Management </h3>
+                                                <p style="font-size:16px !important">
+                                                Organizing & planning the company meetings in a real time by informing each employee about the agenda and updates in addition to important events in a relationship with business development .
+                                                </p>
+                                                <p class="btn btn-primary btn-sm" style="margin-top:30px;background:green;" />Find Out More</p>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <footer style="margin-bottom:30px;">
+                            <p>and this is just the tip of the iceberg</p>
+                            <a href="#signup" class="btn btn-primary">Go for it</a>
+
+                        </footer>
+                    </article>
+                </div>
+            </div>
+
+            <div id="third-wipe" class="wrapper signupbg text-left">
+                <div class="MScontainer">
+                    <article id="signup" class="container ">
+                        <header style="padding-top:15%">
+                            <h1>Sign up now and get 60 days for free</h1>
+                            <p>your success is just on the tip of your fingers</p>
+                        </header>
+
+
+                        <div class="row">
+
+                            <div class="col-md-12">
+
+                                <ul class=" pull-right">
+
+                                    <a href="/signup">
+
+                                        <input type="submit" class="btn btn-primary btn-lg" value="Sign Up now" />
+
+                                    </a>
+
+                                </ul>
+
+
+                            </div>
+                        </div>
+
+                        <footer>
+
+                        </footer>
+                    </article>
+                </div>
+            </div>
+
+            <footer class="footer" style="height:100px !important;padding:20px;background:#212832;font-weight: 400;">
+      <div class="container">
+        <a class="text-muted">Terms</a>
+        <a class="text-muted">Privacy</a>
+      </div>
+    </footer>
+
+
+
+        </section>
+    </div>
+
+    <script src="{% static '/static/home/js/ScrollMagicInit.js' %}"></script>
+
+
+    {% endblock %}
+</body>
+
+</html>

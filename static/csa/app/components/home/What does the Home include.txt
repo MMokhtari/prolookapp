@@ -1,0 +1,8 @@
+The Home include (design):
+	1.descriptions of the prolookapp (magicslider.js will be used)
+	2.login button
+	3.register button
+The Home include (controller):
+	1.Home controller (the one who loads the page,contain the routes register , register)
+	2.login controller (hndonoff)
+	3.register controller ()

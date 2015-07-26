@@ -1,0 +1,6 @@
+For the moment we don't need any shared thing any way what the thing that should be shared
+maybe:
+1.sidbar
+2.footer
+3.header
+4.

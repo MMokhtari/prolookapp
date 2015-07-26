@@ -1,0 +1,9 @@
+The HandOnOff should an must be cutting edge tech no just a peace of code
+The HandOnOff should an must be free don't really to this project
+Designs:
+	1.login
+	2.register
+Controllers:
+	1.login controller
+	2.register controller
+	3.logout controller

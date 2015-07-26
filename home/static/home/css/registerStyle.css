@@ -1,0 +1,273 @@
+.gray-text {
+    color: rgb(174, 174, 174);
+    height: 21px;
+    text-align: center;
+    font: normal normal 300 normal 16.7999992370605px/21px 'Helvetica Neue', Arial, sans-serif;
+    margin: 0px 0px 40px;
+}
+.price-tag {
+    color: rgb(68, 68, 68);
+    height: 420px;
+    width: 29%;
+    min-width: 250px;
+    text-align: center;
+    background: rgb(253, 253, 253) none repeat scroll 0% 0% / auto padding-box border-box;
+    border: 1px solid rgb(204, 204, 204);
+    border-radius: 10px 10px 10px 10px;
+    font: normal normal normal normal 14px/21px 'Helvetica Neue', Arial, sans-serif;
+    margin: 0px 20px 20px 0px;
+    margin-left: 20px;
+    outline: rgb(68, 68, 68) none 0px;
+    padding: 20px 0px;
+    display: inline-block;
+    /*-webkit-transition-property: -webkit-transform ;
+    -webkit-transition-duration: 1s 1s;
+    -webkit-transition-timing-function: ease-in-out ;
+    -webkit-transition-delay: 0 0 1 0s;*/
+   
+}
+.card{
+     -webkit-transform-style: preserve-3d;
+     -webkit-transition: all 1s ease-in-out;
+}
+.card .side {
+  backface-visibility: hidden;
+}
+.card .back {
+  transform: rotateY(180deg);
+}
+.card .flip{
+     transform: rotateY(180deg);
+}
+.lefttomiddle {
+
+    -webkit-animation-name: l-to-m;
+    -webkit-animation-duration: 1s;
+    /*-webkit-animation-delay: 0.4s;*/
+    -webkit-animation-iteration-count: 1;
+    /*-webkit-animation-direction: finite;*/
+    -webkit-animation-play-state: running;
+    -webkit-animation-fill-mode: forwards;
+}
+.righttomiddle {
+
+    -webkit-animation-name: r-to-m;
+    -webkit-animation-duration: 1s;
+    /*-webkit-animation-delay: 0.4s;*/
+    -webkit-animation-iteration-count: 1;
+    /*-webkit-animation-direction: finite;*/
+    -webkit-animation-play-state: running;
+    -webkit-animation-fill-mode: forwards;
+}
+@-webkit-keyframes r-to-m {
+   
+    from {
+        -webkit-transform: translateX(0%);
+    }
+
+    to {
+        -webkit-transform: translateX(-120%);
+        
+    }
+       
+}
+@-webkit-keyframes l-to-m {
+   
+    from {
+        -webkit-transform: translateX(0%);
+    }
+
+    to {
+        -webkit-transform: translateX(110%);
+        
+    }
+       
+}
+
+
+.centerbox {
+    width: 50%;
+}
+.signupformshow {
+    opacity: 1 !important z-index: 0;
+}
+/*#DIV_6*/
+
+.price-tag-header {
+    color: red;
+    background-color: red;
+}
+.price-tag-trail-box {
+    background: rgb(248, 248, 248) none repeat scroll 0% 0% / auto padding-box border-box;
+    border-radius: 30px 30px 30px 30px;
+    padding: 5px;
+    margin: 10px;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 14px;
+    color: rgb(83, 180, 119);
+}
+.price-tag-row {
+    font: normal normal normal normal 14px/21px 'Helvetica Neue', Arial, sans-serif;
+    border-radius: 30px 30px 30px 30px;
+    padding: 3px;
+    margin: 3px;
+}
+.signup-button {
+    -webkit-border-radius: 6;
+    -moz-border-radius: 6;
+    border-radius: 6px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 14px;
+    background: #3498db;
+    padding: 10px 30px 10px 29px;
+    text-decoration: none;
+}
+.signup-button:hover {
+    background: #3cb0fd;
+    text-decoration: none;
+    color: #ffffff;
+    cursor: pointer;
+}
+.price-tag-green {
+    color: rgb(83, 180, 119);
+    text-align: center;
+    border: 0px none rgb(83, 180, 119);
+    font: normal normal 500 normal 14px/21px 'Helvetica Neue', Arial, sans-serif;
+}
+.price-tag-red {
+    color: rgb(255, 7, 63);
+    text-align: center;
+    border: 0px none rgb(83, 180, 119);
+    font: normal normal 500 normal 14px/21px 'Helvetica Neue', Arial, sans-serif;
+}
+.signup-container {
+    display: block;  
+    box-shadow: rgba(222, 222, 222, 0.45098) 0px 1px 3px 0px;
+    color: rgb(68, 68, 68);
+    background: rgb(255, 255, 255);
+    border: 1px solid rgb(227, 227, 227);
+    border-radius: 5px 5px 5px 5px;
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+    padding-left:5% ;
+    padding-right:5%;
+    position:relative;
+        
+}
+.price-container {
+    margin-top: 20px;
+    padding: 20px;
+
+    box-shadow: rgba(222, 222, 222, 0.45098) 0px 1px 3px 0px;
+    color: rgb(68, 68, 68);
+    background: rgb(255, 255, 255);
+    border: 1px solid rgb(227, 227, 227);
+    border-radius: 5px 5px 5px 5px;
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+    padding-left:5% ;
+    padding-right:5%;
+    position:relative;
+
+}
+.bodybgc {
+    background-color: rgb(252, 252, 252) !important;
+}
+.signup-text-field {
+    padding: 20px;
+    border: 1px solid rgb(148, 186, 181);
+    border-radius: 4px 4px 4px 4px;
+    box-shadow: rgba(222, 222, 222, 0.45098) 0px 1px 3px 0px;
+    font-size: 17px;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+/*.signup-text-field:hover{
+
+  box-shadow: rgba(01, 01, 01, 01) 0px 0px 1px;
+  border-color: rgb(83, 180, 119);
+    
+}*/
+
+.bar {
+    border: 1px solid rgb(227, 227, 227);
+    margin-bottom: 5px;
+}
+.button-google {
+    background-color: red;
+    color: white;
+}
+.button-google:hover {
+    color: rgb(174, 174, 174);
+}
+.inin {
+    z-index: 1;
+    -webkit-animation-name: fadeInLeft;
+    -moz-animation-name: fadeInLeft;
+    -ms-animation-name: fadeInLeft;
+    -o-animation-name: fadeInLeft;
+    animation-name: fadeInLeft;
+    -webkit-animation-delay: 1s;
+    -moz-animation-delay: 1s;
+    -o-animation-delay: 1s;
+    -ms-animation-delay: 1s;
+    animation-delay: 1s;
+}
+.outout {
+    -webkit-animation-name: fadeOutLeft;
+    -moz-animation-name: fadeOutLeft;
+    -ms-animation-name: fadeOutLeft;
+    -o-animation-name: fadeOutLeft;
+    animation-name: fadeOutLeft;
+    z-index: 0;
+    opacity: 0;
+}
+/*.animate{
+    -webkit-animation-duration: 0.5s;
+    -webkit-animation-timing-function: ease;
+    -webkit-animation-fill-mode: both;
+    
+    -moz-animation-duration: 0.5s;
+    -moz-animation-timing-function: ease;
+    -moz-animation-fill-mode: both;
+    
+    -o-animation-duration: 0.5s;
+    -o-animation-timing-function: ease;
+    -o-animation-fill-mode: both;
+    
+    -ms-animation-duration: 0.5s;
+    -ms-animation-timing-function: ease;
+    -ms-animation-fill-mode: both;
+    
+    animation-duration: 0.5s;
+    animation-timing-function: ease;
+    animation-fill-mode: both;
+}*/
+
+#register, #login {
+    position: absolute;
+}
+#loader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    background-color: grey;
+    opacity: .8;
+}
+.ajax-loader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -32px;
+    /* -1 * image width / 2 */
+    
+    margin-top: -32px;
+    /* -1 * image height / 2 */
+    
+    display: block;
+}

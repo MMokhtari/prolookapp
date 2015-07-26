@@ -1,0 +1,116 @@
+{% extends "./workplace/workplace_base.html" %} 
+{% block title %}
+{{ title }}
+{% endblock %}
+{% load staticfiles %} 
+{% block homeassets %}
+<!-- Scripts just for company manager -->
+<link rel="stylesheet" href="{% static '/static/employeesmanager/css/employeesmanager.css' %}" /> 
+<!-- <link rel="stylesheet" href="{% static '/static/csa/assets/libs/dhtmlxscheduler-4.3.0/css/dhtmlxscheduler.css' %}" /> 
+<script type="text/javascript" src="{% static '/static/csa/assets/libs/dhtmlxscheduler-4.3.0/js/dhtmlxscheduler.js' %}"></script> -->
+{% endblock %}
+{% block workplacecontent %}
+<div>
+    <div ng-controller="EmployeesManagerController" class="container-fluid">
+        <div class="row">
+            
+            <div class="col-md-12 ">
+          
+                <div  class="bounceInRight animated">
+                    <div style="float:bottom;margin-bottom:10px"></div>
+
+         
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Organizing Employees in Teams</h3>
+                        </div>
+                        <div class="panel-body">
+                        <div style="margin-bottom:10px;margin-left:40px">
+                            
+                        <a href="#" editable-text="TEAM_NAME" onbeforesave="updateTeamName($data)">{$ TEAM_NAME || 'Team One' $}</a>
+                        <div style="margin-bottom:10px;" class="pull-right hvr-pulse"> <i class="fa fa-gear fa-2x" style='position: relative;bottom: 5px'></i> </div>
+                        </div>
+
+                                
+                            <table style="  border-width: 0px;"class="table table-bordered table-hover table-condensed">
+                                <tr style="background-color:rgb(250, 250, 250);font-weight: bold">
+                                    <td style="  background-color:rgb(255, 255, 255);font-weight: bold; border-width: 0px;width:35px"></td>
+                                    <td style="">Name</td>
+                                    <td style="">Email</td>
+                                    <td style="">Grades</td>
+                                    <td style="">Completed task</td>
+                                    <td style="">Pendding tasks</td>
+                                    <td style="">Refer Tasks</td>
+                                </tr>
+                                <tr >
+                                    <td style="  border-width: 0px;vertical-align: middle;"><img class="img-circle" width="32px" height="32px" src="{% static '/static/workplace/img/me&hich.jpg' %}"></td>
+                                    <td style="vertical-align: middle;"><strong> Moussa Mokhtari</strong> </td>
+                                    <td style="vertical-align: middle;">m_mokhtari@esi.dz</td>
+                                    <td style="vertical-align: middle;"><strong> 7/10</strong> </td>
+                                    <td style="vertical-align: middle;">9/99</td>
+                                    <td style="vertical-align: middle;">50/99</td>
+                                    <td style="vertical-align: middle;">40/99</td>
+                                    
+                                </tr>
+                               <tr >
+                               <td style="  border-width: 0px;vertical-align: middle;"><img class="img-circle" width="32px" height="32px" src="{% static '/static/workplace/img/me&hich.jpg' %}"></td>
+                                    <td style="vertical-align: middle;"><strong> Djelloul sellami</strong> </td>
+                                    <td style="vertical-align: middle;">d_sellami@esi.dz</td>
+                                    <td style="vertical-align: middle;"><strong> 7/10</strong> </td>
+                                    <td style="vertical-align: middle;">9/99</td>
+                                    <td style="vertical-align: middle;">50/99</td>
+                                    <td style="vertical-align: middle;">40/99</td>
+                                    
+                                </tr>
+                                 <tr >
+                                 <td style="  border-width: 0px;vertical-align: middle;"><img class="img-circle" width="32px" height="32px" src="{% static '/static/workplace/img/me&hich.jpg' %}"></td>
+                                    <td style="vertical-align: middle;"><strong> mostefa</strong> </td>
+                                    <td style="vertical-align: middle;">mostefa@esi.dz</td>
+                                    <td style="vertical-align: middle;"><strong> 7/10</strong> </td>
+                                    <td style="vertical-align: middle;">9/99</td>
+                                    <td style="vertical-align: middle;">50/99</td>
+                                    <td style="vertical-align: middle;">40/99</td>
+                                    
+                                </tr>
+                                <tr >
+                                <td style="  border-width: 0px;vertical-align: middle;"><img class="img-circle" width="32px" height="32px" src="{% static '/static/workplace/img/me&hich.jpg' %}"></td>
+                                    <td style="vertical-align: middle;"><strong> hicham</strong> </td>
+                                    <td style="vertical-align: middle;">h_hadji@esi.dz</td>
+                                    <td style="vertical-align: middle;"><strong> 7/10</strong> </td>
+                                    <td style="vertical-align: middle;">9/99</td>
+                                    <td style="vertical-align: middle;">50/99</td>
+                                    <td style="vertical-align: middle;">40/99</td>
+                                    
+                                </tr>
+                                 <tr >
+                                <td style="  border-width: 0px;vertical-align: middle;"><img class="img-circle" width="32px" height="32px" src="{% static '/static/workplace/img/avatar.jpg' %}"></td>
+                                    <td style="width:20%;"><strong> <a href="#" editable-text="TEAM_NAME2" onbeforesave="updateTeamName($data)">{$ TEAM_NAME2 || 'Name' $}</a></strong> </td>
+                                    <td style="vertical-align: middle;"></td>
+                                    <td style="vertical-align: middle;"><strong> </strong> </td>
+                                    <td style="vertical-align: middle;"></td>
+                                    <td style="vertical-align: middle;"></td>
+                                    <td style="vertical-align: middle;"></td>
+                                    
+                                </tr>
+                            </table>
+                                
+
+
+                            <div class="btn btn-primary pull-right">Add Team
+                            <i class="fa fa-plus fa-1x "></i></div>
+
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+        <div class="row">
+
+        </div>
+    </div>
+</div>
+
+{% endblock%}

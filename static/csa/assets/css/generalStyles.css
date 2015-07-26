@@ -1,0 +1,97 @@
+.pro-add-button {
+    -webkit-border-radius: 6;
+    -moz-border-radius: 6;
+    border-radius: 6px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 14px;
+    background: #3498db;
+    padding: 10px 30px 10px 29px;
+    text-decoration: none;
+    text-align: center;
+    background-color:rgb(22, 181, 202);
+}
+.pro-add-button:hover {
+    background-color:rgb(127, 160, 165);
+    text-decoration: none;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+/* enable absolute positioning */
+.inner-addon {
+  position: relative;
+}
+
+/* style glyph */
+.inner-addon .glyphicon {
+  position: absolute;
+  padding: 10px;
+  pointer-events: none;
+}
+
+/* align glyph */
+.left-addon .glyphicon  { left:  0px;}
+.right-addon .glyphicon { right: 0px;}
+
+/* add padding  */
+.left-addon input  { padding-left:  30px; }
+.right-addon input { padding-right: 30px; }
+
+.onedit input {
+    position: relative;
+    background-color: transparent;
+
+    text-align: center;
+}
+.preedit {
+    height: 40px;
+
+    text-decoration: none;
+    background-color: rgb(239, 239, 239);
+  border-radius: 5px ;
+}
+.pro-text-field {
+    border: 1px solid rgb(148, 186, 181) !important;
+    border-radius: 4px 4px 4px 4px !important;
+    box-shadow: rgba(222, 222, 222, 0.45098) 0px 1px 3px 0px !important;
+    font-size: 17px;
+    font-family: 'Helvetica Neue', Arial, sans-serif !important;
+    margin-bottom: 7px;
+    padding-right:25px !important;
+}
+.pro-text-field:focus{
+
+  box-shadow: rgba(01, 01, 01, 01) 0px 0px 1px !important;
+  border-color: rgb(83, 180, 119) !important;
+    
+}
+a.editable {
+    font-size: 20px;
+    /*font-family: 'Helvetica Neue', Arial, sans-serif !important; */
+    border: dotted 0px green !important;
+    text-decoration: none;
+}
+a.editable-click { 
+    color: #535444 !important;
+    border: dotted 0px green !important;
+}
+a.editable-empty { 
+    opacity: 0.5;
+    border: dotted 0px green !important;
+}
+.editable-input  { 
+    
+    cursor: default !important;
+    font-size: 18px !important;
+    /*font-family: 'Helvetica Neue', Arial, sans-serif !important; */
+    border: thin .5px green !important;
+    border-color: rgb(134, 190, 134) !important;
+}
+a.editable-click:hover { 
+    color: gray !important;
+    border-bottom-color: #47a447 !important;
+}
+body{
+    font: 17px/1.4 Helvetica, arial, nimbussansl, liberationsans, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+}

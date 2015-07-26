@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html ng-app="">
+    <head>
+        <title>ProLookApp</title>
+        {% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static 'home/style.css' %}" />
+<script type="text/javascript" src="{% static 'home/angular.min.js' %}"></script>
+<script type="text/javascript" src="/static/csa/app/components/handonoff/handonoff.js"></script>
+<!-- <script type="text/javascript" src="/static/csa/app/components/handonoff/controllers/register_controller.js"></script>
+<script type="text/javascript" src="/static/csa/app/components/handonoff/controllers/signin_controller.js"></script>
+<script type="text/javascript" src="/static/csa/app/components/handonoff/controllers/signout_controller.js"></script> -->
+<script type="text/javascript" src="/static/csa/app/components/handonoff/controllers/handonoff_controller.js"></script>
+<script type="text/javascript" src="/static/csa/app/components/handonoff/factories/handonoff_factory"></script>
+<script type="text/javascript" src="/static/csa/app/csa_config.js"></script>
+<script type="text/javascript" src="/static/csa/app/csa_routes.js"></script>
+<script type="text/javascript" src="/static/csa/app/csa.js"></script>
+
+    </head>
+
+    <body>
+    {% verbatim %}
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    name : <input type="text" ng-model="name"/>{{name}}
+     {% endverbatim %}
+    <div class="header"><h3 align="right">Hello {{content.user}}</h3></div>
+    <div class="content">
+    	<h3>Your auth is : {{content.auth}}</h3>
+
+    <a href='/register'><h4>Login</h2></a>
+    {% block content %}
+
+    {% endblock %}
+
+    {% block login %}
+
+    {% endblock %}
+
+   
+    </div>
+    
+    </body>
+</html>

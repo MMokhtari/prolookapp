@@ -1,0 +1,461 @@
+// General Styles
+// ====================================================================
+body {} body, html {
+    height: 100%
+}
+.box {
+    background: #fff;
+    box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.15), 0px 2px 3px 0px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+/* Wrappers                                                                      */
+/*********************************************************************************/
+
+.wrapper {
+    /*background-image: url('images/bg.png');*/
+    
+    color: white;
+    box-shadow: inset 0px 1px 0px 0px rgba(0, 0, 0, 0.05), inset 0px 2px 3px 0px rgba(0, 0, 0, 0.1);
+}
+.wrapper.first {
+    box-shadow: none;
+}
+.wrapper.style1 {
+    background: -webkit-linear-gradient(90deg, #283048 10%, #859398 90%);
+    /* Chrome 10+, Saf5.1+ */
+    
+    background: -moz-linear-gradient(90deg, #283048 10%, #859398 90%);
+    /* FF3.6+ */
+    
+    background: -ms-linear-gradient(90deg, #283048 10%, #859398 90%);
+    /* IE10 */
+    
+    background: -o-linear-gradient(90deg, #283048 10%, #859398 90%);
+    /* Opera 11.10+ */
+    
+    background: linear-gradient(90deg, #283048 10%, #859398 90%);
+    /* W3C */
+}
+.wrapper.style2 {
+/*    background-color: #4d9de0;
+*/    /*background-color: #22373d;*/
+background-image: url("/static/csa/app/components/home/partials/img/Pict4.png") ;
+background-repeat: no-repeat ;
+background-position: center;
+background-size: 100%;
+
+}
+.wrapper.style3 {
+    background: -webkit-linear-gradient(90deg, #00d2ff 10%, #3a7bd5 90%);
+    /* Chrome 10+, Saf5.1+ */
+    
+    background: -moz-linear-gradient(90deg, #00d2ff 10%, #3a7bd5 90%);
+    /* FF3.6+ */
+    
+    background: -ms-linear-gradient(90deg, #00d2ff 10%, #3a7bd5 90%);
+    /* IE10 */
+    
+    background: -o-linear-gradient(90deg, #00d2ff 10%, #3a7bd5 90%);
+    /* Opera 11.10+ */
+    
+    background: linear-gradient(90deg, #00d2ff 10%, #3a7bd5 90%);
+    /* W3C */
+}
+.signupbg {
+    background: -webkit-linear-gradient(90deg, #003973 10%, #E5E5BE 90%);
+    /* Chrome 10+, Saf5.1+ */
+    
+    background: -moz-linear-gradient(90deg, #003973 10%, #E5E5BE 90%);
+    /* FF3.6+ */
+    
+    background: -ms-linear-gradient(90deg, #003973 10%, #E5E5BE 90%);
+    /* IE10 */
+    
+    background: -o-linear-gradient(90deg, #003973 10%, #E5E5BE 90%);
+    /* Opera 11.10+ */
+    
+    background: linear-gradient(90deg, #003973 10%, #E5E5BE 90%);
+    /* W3C */
+}
+.feat-box {
+    -webkit-box-shadow: -1px 10px 25px 0px rgba(0, 0, 0, 0.06);
+    -moz-box-shadow: -1px 10px 25px 0px rgba(0, 0, 0, 0.06);
+    box-shadow: -1px 10px 25px 0px rgba(0, 0, 0, 0.06);
+    background-color: #575654;
+    padding: 15px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+.round-button {
+    width: 10%;
+}
+.round-button-circle {
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%;
+    border-radius: 50%;
+    border: 10px solid #cfdcec;
+    overflow: hidden;
+    background: #4679BD;
+    box-shadow: 0 0 3px gray;
+}
+.round-button-circle:hover {
+    background: #30588e;
+}
+.round-button a {
+    display: block;
+    float: left;
+    width: 100%;
+    padding-top: 50%;
+    padding-bottom: 50%;
+    line-height: 1em;
+    margin-top: -0.5em;
+    text-align: center;
+    color: #e2eaf3;
+    font-family: Verdana;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-decoration: none;
+}
+.wrapper.style5 {
+    background-color: #6f97b6;
+    color: black;
+}
+.wrapper.style4 {
+    background-color: #303030;
+    color: #999;
+    text-shadow: -1px -1px 0px #181818;
+}
+.wrapper.style4 h1, .wrapper.style4 h2, .wrapper.style4 h3, .wrapper.style4 h4, .wrapper.style4 h5, .wrapper.style4 h6 {
+    color: #fff;
+}
+.wrapper.style4 form input[type=text], .wrapper.style4 form input[type=password], .wrapper.style4 form select, .wrapper.style4 form textarea {
+    border: none;
+    background: #282828;
+}
+.wrapper.style4 form input[type=text]:focus, .wrapper.style4 form input[type=password]:focus, .wrapper.style4 form select:focus, .wrapper.style4 form textarea:focus {
+    background: #252525;
+}
+// ScrollMagic Containers
+// ====================================================================
+.MScontainer {
+    height: 100%;
+    margin: 0 auto;
+    max-width: 900px;
+    position: relative;
+    width: 100%;
+}
+#content-wrapper {
+    height: 100%;
+    min-height: 500px;
+    width: 100%;
+}
+.scroll-magic-section {
+    height: 100%;
+    /* padding-top: 50px;*/
+}
+// ScrollMagic Pin Panel
+// ====================================================================
+#pin {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+// ScrollMagic Wipe Panels
+// ====================================================================
+#wipe {
+    /*height: 110% ;*/
+    
+    min-height: 100%;
+    overflow: hidden;
+    position: relative;
+    /* top: 0;
+    left: 0;*/
+    /*transform: translateY(100%);*/
+    
+    font-family: "Myriad Pro Regular";
+    color: #555555;
+    width: 100%;
+}
+#second-wipe {
+    /*height: 100%;*/
+    
+    overflow: hidden;
+    position: relative;
+    background: rgb(252, 252, 252);
+    /*top: 0;
+    right: 0;*/
+    /* transform: translateY(100%);*/
+    /*font-family:  sans-serif serif !important;*/
+    
+    font-family: "Myriad Pro Regular";
+    color: #555555;
+    width: 100%;
+    /*    -webkit-transition: 0.4s ease-in-out;
+    -moz-transition: 0.4s ease-in-out;
+    -o-transition: 0.4s ease-in-out;
+    transition: 0.4s ease-in-out;*/
+}
+#third-wipe {
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    /*top: 0;
+    right: 0;*/
+    
+    /*color: #555555;*/
+    font-family: "Myriad Pro Regular";
+    width: 100%;
+    /*padding-top: 15%;*/
+    /*transform: translateY(100%);
+     -webkit-transition: 0.4s ease-in-out;
+    -moz-transition: 0.4s ease-in-out;
+    -o-transition: 0.4s ease-in-out;
+    transition: 0.4s ease-in-out;*/
+}
+.nav-bar {
+    box-sizing: border-box;
+    height: 85px;
+    position: fixed;
+    right: 35px;
+    top: 248px;
+    width: 24px;
+    z-index: 40;
+    perspective-origin: 12px 64px;
+    transform-origin: 12px 64px;
+    background: rgb(248, 248, 248) none repeat scroll 0% 0% / auto padding-box border-box;
+    border-radius: 12px 12px 12px 12px;
+    font: normal normal normal normal 16px/normal 'Times New Roman';
+    margin: -64px 0px 0px;
+    padding: 10px 6px;
+}
+/*#DIV_1*/
+
+.nav-bar-comp {
+    box-sizing: border-box;
+    height: 12px;
+    max-height: 12px;
+    position: relative;
+    width: 12px;
+    perspective-origin: 6px 6px;
+    transform-origin: 6px 6px;
+    font: normal normal normal normal 16px/normal 'Times New Roman';
+    margin: 0px 0px 12px;
+    overflow: hidden;
+    transition: all 0.5s ease 0s;
+}
+/*#DIV_2, #DIV_8, #DIV_18, #DIV_24*/
+
+.nav-bar-comp a {
+    box-sizing: border-box;
+    display: block;
+    height: 12px;
+    position: relative;
+    text-indent: -9999px;
+    width: 12px;
+    perspective-origin: 6px 6px;
+    transform-origin: 6px 6px;
+    background: rgba(0, 0, 0, 0) url(https://www.google.com/photos/about/images/nav/button-bkg-dark.png) no-repeat scroll 0% 0% / 12px 12px padding-box border-box;
+    font: normal normal normal normal 16px/normal 'Times New Roman';
+    overflow: hidden;
+}
+/*#A_3, #A_9, #A_19, #A_25, #A_33*/
+
+.nav-bar-comp-left {
+    box-sizing: border-box;
+    color: rgb(0, 0, 238);
+    height: 12px;
+    left: 0px;
+    position: absolute;
+    text-indent: -9999px;
+    top: 0px;
+    width: 6px;
+    align-self: stretch;
+    perspective-origin: 3px 6px;
+    transform-origin: 3px 6px;
+    border: 0px none rgb(0, 0, 238);
+    font: normal normal normal normal 16px/normal 'Times New Roman';
+    outline: rgb(0, 0, 238) none 0px;
+    overflow: hidden;
+}
+/*#DIV_3*/
+
+.nav-bar-comp-right {
+    box-sizing: border-box;
+    color: rgb(0, 0, 238);
+    height: 12px;
+    left: 6px;
+    position: absolute;
+    text-indent: -9999px;
+    top: 0px;
+    width: 6px;
+    align-self: stretch;
+    perspective-origin: 3px 6px;
+    transform-origin: 3px 6px;
+    border: 0px none rgb(0, 0, 238);
+    font: normal normal normal normal 16px/normal 'Times New Roman';
+    outline: rgb(0, 0, 238) none 0px;
+    overflow: hidden;
+}
+/*#DIV_5*/
+
+.nav-bar-comp-rightC {
+    box-sizing: border-box;
+    color: rgb(0, 0, 238);
+    height: 12px;
+    left: 0px;
+    position: absolute;
+    text-indent: -9999px;
+    top: 0px;
+    width: 6px;
+    z-index: 0;
+    backface-visibility: hidden;
+    align-self: stretch;
+    perspective-origin: 3px 6px;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+    transform-origin: 0px 6px;
+    background: rgba(0, 0, 0, 0) url(https://www.google.com/photos/about/images/nav/button-bkg-dark-half.png) no-repeat scroll 0% 0% / 6px 12px padding-box border-box;
+    border: 0px none rgb(0, 0, 238);
+    font: normal normal normal normal 16px/normal 'Times New Roman';
+    outline: rgb(0, 0, 238) none 0px;
+}
+/*#DIV_6*/
+
+.nav-bar-comp-leftC {
+    box-sizing: border-box;
+    color: rgb(0, 0, 238);
+    height: 12px;
+    left: 6px;
+    position: absolute;
+    text-indent: -9999px;
+    top: 0px;
+    width: 6px;
+    z-index: 0;
+    backface-visibility: hidden;
+    align-self: stretch;
+    perspective-origin: 3px 6px;
+    transform: matrix(-1, 1.22464679914735e-16, -1.22464679914735e-16, -1, 0, 0);
+    transform-origin: 0px 6px;
+    background: rgba(0, 0, 0, 0) url(https://www.google.com/photos/about/images/nav/button-bkg-dark-half.png) no-repeat scroll 0% 0% / 6px 12px padding-box border-box;
+    border: 0px none rgb(0, 0, 238);
+    font: normal normal normal normal 16px/normal 'Times New Roman';
+    outline: rgb(0, 0, 238) none 0px;
+}
+/*#DIV_4*/
+/*
+carousel 
+*/
+/* .carousel-container {
+      width: 210px;
+      height: 140px;
+      position: relative;
+      margin: 0 auto 40px;
+      border: 1px solid #CCC;
+      border-width: inherit;
+      -webkit-perspective: 1100px;
+         -moz-perspective: 1100px;
+           -o-perspective: 1100px;
+              perspective: 1100px;
+    }
+
+
+    #carousel {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      -webkit-transform-style: preserve-3d;
+         -moz-transform-style: preserve-3d;
+           -o-transform-style: preserve-3d;
+              transform-style: preserve-3d;
+    }
+
+    .ready #carousel {
+      -webkit-transition: -webkit-transform 1s;
+         -moz-transition: -moz-transform 1s;
+           -o-transition: -o-transform 1s;
+              transition: transform 1s;
+    }
+
+    #carousel.panels-backface-invisible figure {
+      -webkit-backface-visibility: hidden;
+         -moz-backface-visibility: hidden;
+           -o-backface-visibility: hidden;
+              backface-visibility: hidden;
+    }
+
+    #carousel figure {
+      display: block;
+      position: absolute;
+      width: 186px;
+      height: 116px;
+      left: 10px;
+      top: 10px;
+      border: 2px solid black;
+      line-height: 116px;
+      font-size: 80px;
+      font-weight: bold;
+      color: white;
+      text-align: center;
+    }
+
+    .ready #carousel figure {
+      -webkit-transition: opacity 1s, -webkit-transform 1s;
+         -moz-transition: opacity 1s, -moz-transform 1s;
+           -o-transition: opacity 1s, -o-transform 1s;
+              transition: opacity 1s, transform 1s;
+    }*/
+
+.flip-container {
+    perspective: 1000;
+    text-align: center;
+}
+/* flip the pane when hovered */
+
+.flip-container:hover .flipper, .flip-container.hover .flipper {
+    transform: rotateY(180deg);
+}
+.flip-container, .front, .back {
+    width: 100%;
+    height: 300px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+/* flip speed goes here */
+
+.flipper {
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+/* hide back of pane during swap */
+
+.front, .back {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+}
+/* front pane, placed above back */
+
+.front {
+    z-index: 2;
+    /* for firefox 31 */
+    
+    transform: rotateY(0deg);
+    
+    background: #EDEDED;
+    border-radius: 5px;
+    padding: 15px;
+    padding-top: 20px;
+}
+/* back, initially hidden pane */
+
+.back {
+    transform: rotateY(180deg);
+    
+    background: #EDEFED;
+    border-radius: 5px;
+    padding: 15px;
+    padding-top: 20px;
+}
